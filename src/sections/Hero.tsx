@@ -7,19 +7,24 @@ export default function Hero() {
   const roles = ['Full Stack Developer', 'Front End Specialist', 'TypeScript Enthusiast'];
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-black"></div>
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-black" />
 
+      {/* Floating cyan dots */}
       <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute bg-cyan-500/20 rounded-full"
             style={{
-              width: Math.random() * 4 + 1 + 'px',
-              height: Math.random() * 4 + 1 + 'px',
-              left: Math.random() * 100 + '%',
-              top: Math.random() * 100 + '%',
+              width: `${Math.random() * 4 + 1}px`,
+              height: `${Math.random() * 4 + 1}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -30, 0],
@@ -34,8 +39,10 @@ export default function Hero() {
         ))}
       </div>
 
+      {/* Main content container */}
       <div className="relative z-10 container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+          {/* Profile image with animated gradient */}
           <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -47,21 +54,26 @@ export default function Hero() {
               transition={{ duration: 4, repeat: Infinity }}
               className="relative w-48 h-48 md:w-64 md:h-64"
             >
+              {/* Gradient background */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-2xl opacity-50"></div>
+
+              {/* Profile image */}
               <img
-                src="src/panneer.jpg"
+                src="/image.jpg"
                 alt="Panneer Selvam — Profile photo"
                 loading="lazy"
                 decoding="async"
                 onError={(e) => {
-                  // fallback to a public placeholder if the image is missing
-                  (e.currentTarget as HTMLImageElement).src = '/fallback-profile.png';
+                  const target = e.target as HTMLImageElement;
+                  target.onerror = null;
+                  target.src = "/fallback.jpg";
                 }}
-                className="relative w-full h-full rounded-full object-cover border-4 border-cyan-500/30 shadow-2xl"
+                className="relative w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg mx-auto"
               />
             </motion.div>
           </motion.div>
 
+          {/* Text content */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -112,11 +124,14 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             >
               <Button href="#projects">View Projects</Button>
-              <Button variant="secondary" href="#contact">Contact Me</Button>
+              <Button variant="secondary" href="#contact">
+                Contact Me
+              </Button>
             </motion.div>
           </motion.div>
         </div>
 
+        {/* Chevron down to scroll */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
