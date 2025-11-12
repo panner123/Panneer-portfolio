@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import AnimatedText from '../components/AnimatedText';
 
 export default function Hero() {
-  const roles = ['Frontend Developer', 'React Specialist', 'TypeScript Enthusiast', 'UI/UX Designer'];
+  const roles = ['Full Stack Developer', 'Front End Specialist', 'TypeScript Enthusiast'];
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -49,8 +49,14 @@ export default function Hero() {
             >
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-2xl opacity-50"></div>
               <img
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop"
-                alt="Profile"
+                src="src/panneer.jpg"
+                alt="Panneer Selvam — Profile photo"
+                loading="lazy"
+                decoding="async"
+                onError={(e) => {
+                  // fallback to a public placeholder if the image is missing
+                  (e.currentTarget as HTMLImageElement).src = '/fallback-profile.png';
+                }}
                 className="relative w-full h-full rounded-full object-cover border-4 border-cyan-500/30 shadow-2xl"
               />
             </motion.div>

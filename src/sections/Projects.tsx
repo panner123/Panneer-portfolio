@@ -4,18 +4,18 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform with shopping cart, payment integration, and admin dashboard built with React and Stripe.',
-      image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'TypeScript', 'Tailwind', 'Stripe'],
+      title: 'Dear Database',
+      description: 'A symbol of elegance and agility, the deer embodies grace in motion and serenity in nature.',
+      image: 'src/dear image.webp',
+      technologies: ['HTML', 'CSS', 'JavaScript',],
       liveUrl: '#',
-      githubUrl: '#',
+      githubUrl: '',
       gradient: 'from-cyan-500 to-blue-500'
     },
     {
       title: 'Task Management App',
       description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: 'https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '',
       technologies: ['React', 'Firebase', 'Material-UI'],
       liveUrl: '#',
       githubUrl: '#',

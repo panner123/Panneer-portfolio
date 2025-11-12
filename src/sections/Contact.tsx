@@ -33,15 +33,15 @@ export default function Contact() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'panneer@example.com', href: 'mailto:panneer@example.com' },
-    { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, label: 'Location', value: 'San Francisco, CA', href: '#' }
+    { icon: Mail, label: 'Email', value: 'pannerselva232@gmail.com', href: 'mailto:pannerselva232@gmail.com' },
+    { icon: Phone, label: 'Phone', value: '9344346792', href: 'tel:+919344346792' },
+    { icon: MapPin, label: 'Location', value: 'Coimbatore , Tamil Nadu , India', href: '#' }
   ];
 
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub', color: 'hover:text-gray-300' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn', color: 'hover:text-blue-500' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter', color: 'hover:text-sky-500' }
+    { icon: FaGithub, href: 'https://github.com/panner123', label: 'GitHub', color: 'hover:text-gray-300' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/panneer-selvam-e-b92656306', label: 'LinkedIn', color: 'hover:text-blue-500' },
+    
   ];
 
   return (

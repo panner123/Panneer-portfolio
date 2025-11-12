@@ -3,10 +3,10 @@ import { Code2, Palette, Zap, Database } from 'lucide-react';
 
 export default function About() {
   const skills = [
-    { name: 'React & TypeScript', level: 95, icon: Code2, color: 'from-cyan-500 to-blue-500' },
-    { name: 'Tailwind CSS', level: 90, icon: Palette, color: 'from-purple-500 to-pink-500' },
-    { name: 'Performance Optimization', level: 85, icon: Zap, color: 'from-yellow-500 to-orange-500' },
-    { name: 'Backend & Databases', level: 80, icon: Database, color: 'from-green-500 to-teal-500' },
+    { name: 'HTML & CSS', level: 100, icon: Code2, color: 'from-cyan-500 to-blue-500' },
+    { name: 'JavaScript', level: 75, icon: Palette, color: 'from-purple-500 to-pink-500' },
+    { name: 'React', level: 85, icon: Zap, color: 'from-yellow-500 to-orange-500' },
+    { name: 'Performance Optimization', level: 80, icon: Database, color: 'from-green-500 to-teal-500' },
   ];
 
   const containerVariants = {
@@ -92,7 +92,7 @@ export default function About() {
                 viewport={{ once: true }}
                 className="text-4xl font-bold text-cyan-500 mb-2"
               >
-                50+
+                5+
               </motion.div>
               <p className="text-gray-400">Projects Completed</p>
             </div>
@@ -104,11 +104,11 @@ export default function About() {
                 transition={{ delay: 0.2 }}
                 className="text-4xl font-bold text-purple-500 mb-2"
               >
-                5+
+                2+
               </motion.div>
               <p className="text-gray-400">Years Experience</p>
             </div>
-            <div className="text-center">
+            {/* <div className="text-center">
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
@@ -119,7 +119,7 @@ export default function About() {
                 30+
               </motion.div>
               <p className="text-gray-400">Happy Clients</p>
-            </div>
+            </div> */}
           </div>
         </motion.div>
       </div>

@@ -5,42 +5,34 @@ export default function Experience() {
   const experiences = [
     {
       type: 'work',
-      year: '2023 - Present',
-      title: 'Senior Frontend Developer',
-      company: 'Tech Innovations Inc.',
-      description: 'Leading the frontend development team, architecting scalable React applications, and mentoring junior developers.',
+      year: '2025 - Present',
+      title: 'Full Stack Developer',
+      company: 'IDM Teackpark Academy',
+      description: 'Completed intensive bootcamp covering modern web development technologies including  HTML, CSS, Javascript ,React, Python and Django.',
       icon: Briefcase
     },
     {
       type: 'work',
-      year: '2021 - 2023',
-      title: 'Frontend Developer',
-      company: 'Digital Solutions Ltd.',
+      year: '2025 - 2026',
+      title: 'web Developer Intern',
+      company: 'segolsys',
       description: 'Built responsive web applications using React, TypeScript, and modern CSS frameworks. Collaborated with design team to implement pixel-perfect UIs.',
       icon: Briefcase
     },
     {
-      type: 'education',
-      year: '2020 - 2021',
-      title: 'Full Stack Web Development',
-      company: 'Code Academy',
-      description: 'Completed intensive bootcamp covering modern web development technologies including React, Node.js, and databases.',
-      icon: GraduationCap
-    },
-    {
       type: 'work',
-      year: '2019 - 2021',
-      title: 'Junior Web Developer',
-      company: 'StartUp Ventures',
-      description: 'Developed and maintained company websites, implemented new features, and optimized performance for better user experience.',
+      year: '19 september 2024 -  06 December2024',
+      title: 'Junior Web Developer Intern',
+      company: 'Corizo',
+      description: 'I worked on practical projects that enhanced my skills in HTML, CSS, JavaScript, and responsive design, while also deepening my understanding of problem-solving, debugging, and UI/UX principles.',
       icon: Briefcase
     },
     {
       type: 'education',
-      year: '2016 - 2019',
+      year: '2022 - 2026',
       title: 'Bachelor of Computer Science',
-      company: 'University of Technology',
-      description: 'Graduated with honors. Focused on software engineering, algorithms, and web technologies.',
+      company: 'Nehru Institute of Technology',
+      description: 'Currently pursuing Final Year. Focused on software engineering, algorithms, and web technologies.',
       icon: GraduationCap
     }
   ];

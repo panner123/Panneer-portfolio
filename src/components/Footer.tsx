@@ -3,9 +3,8 @@ import { FaGithub, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa';
 
 export default function Footer() {
   const socialLinks = [
-    { icon: FaGithub, href: 'https://github.com', label: 'GitHub' },
-    { icon: FaLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: FaTwitter, href: 'https://twitter.com', label: 'Twitter' },
+    { icon: FaGithub, href: 'https://github.com/panner123', label: 'GitHub' },
+    { icon: FaLinkedin, href: 'https://www.linkedin.com/in/panneer-selvam-e-b92656306', label: 'LinkedIn' },
   ];
 
   return (
@@ -19,7 +18,7 @@ export default function Footer() {
             className="text-gray-400 text-sm mb-4 md:mb-0"
           >
             <p className="flex items-center gap-2">
-              © 2024 Panneer Selvam. Made with <FaHeart className="text-red-500" /> and React
+              © 2025 Panneer Selvam. Made with <FaHeart className="text-red-500" /> and React
             </p>
           </motion.div>
 
