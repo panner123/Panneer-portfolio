@@ -52,7 +52,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -20, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
-              className="relative w-48 h-48 md:w-64 md:h-64"
+              className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96"
             >
               {/* Gradient background */}
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-2xl opacity-50"></div>
@@ -68,7 +68,7 @@ export default function Hero() {
                   target.onerror = null;
                   target.src = "/fallback.jpg";
                 }}
-                className="relative w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg mx-auto"
+                className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-white shadow-lg mx-auto"
               />
             </motion.div>
           </motion.div>
