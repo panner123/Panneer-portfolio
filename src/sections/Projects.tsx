@@ -6,57 +6,33 @@ export default function Projects() {
     {
       title: 'Dear Database',
       description: 'A symbol of elegance and agility, the deer embodies grace in motion and serenity in nature.',
-      image: 'src/dear image.webp',
+      image: 'public/dear image.jpeg',
       technologies: ['HTML', 'CSS', 'JavaScript',],
       liveUrl: '#',
       githubUrl: '',
       gradient: 'from-cyan-500 to-blue-500'
     },
     {
-      title: 'Task Management App',
+      title: 'Food Waste Reduction Platform',
       description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: '',
-      technologies: ['React', 'Firebase', 'Material-UI'],
+      image: 'public/food waste.webp',
+      technologies: ['HTML', 'CSS', 'React','AI'],
       liveUrl: '#',
       githubUrl: '#',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Weather Dashboard',
-      description: 'Beautiful weather dashboard with location-based forecasts, interactive maps, and detailed weather analytics.',
-      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'OpenWeather API', 'Chart.js'],
+      title: 'Interactive Portfolio Website',
+      description: 'This responsive portfolio website showcases my journey as a web developer, highlighting key projects, skills, and achievements. Designed with clean UI principles and mobile-first responsiveness, it serves as a digital resume and creative showcase.',
+      image: 'public/potfolio.webp',
+      technologies: ['HTML', 'CSS', 'React', 'API Integration'],
       liveUrl: '#',
       githubUrl: '#',
       gradient: 'from-yellow-500 to-orange-500'
     },
-    {
-      title: 'Social Media Analytics',
-      description: 'Comprehensive analytics dashboard for social media metrics with data visualization and export capabilities.',
-      image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'D3.js', 'Node.js'],
-      liveUrl: '#',
-      githubUrl: '#',
-      gradient: 'from-green-500 to-teal-500'
-    },
-    {
-      title: 'Portfolio Builder',
-      description: 'No-code portfolio builder allowing users to create stunning portfolios with drag-and-drop interface.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'Framer Motion', 'Supabase'],
-      liveUrl: '#',
-      githubUrl: '#',
-      gradient: 'from-pink-500 to-rose-500'
-    },
-    {
-      title: 'AI Writing Assistant',
-      description: 'Smart writing assistant powered by AI to help with content creation, grammar checking, and style suggestions.',
-      image: 'https://images.pexels.com/photos/5952651/pexels-photo-5952651.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React', 'OpenAI', 'TypeScript'],
-      liveUrl: '#',
-      githubUrl: '#',
-      gradient: 'from-indigo-500 to-purple-500'
-    }
+    
+    
+  
   ];
 
   return (
