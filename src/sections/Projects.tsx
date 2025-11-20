@@ -6,7 +6,7 @@ export default function Projects() {
     {
       title: 'Dear Database',
       description: 'A symbol of elegance and agility, the deer embodies grace in motion and serenity in nature.',
-      image: '/dear-image.jpg', // ✅ Correct path
+      image: '/dear-image.jpg',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       liveUrl: '#',
       githubUrl: '#',
@@ -15,7 +15,7 @@ export default function Projects() {
     {
       title: 'Food Waste Reduction Platform',
       description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: '/food-waste.jpg', // ✅ Correct path
+      image: '/food-waste.jpg',
       technologies: ['HTML', 'CSS', 'React', 'AI'],
       liveUrl: '#',
       githubUrl: '#',
@@ -24,13 +24,14 @@ export default function Projects() {
     {
       title: 'Interactive Portfolio Website',
       description: 'This responsive portfolio website showcases my journey as a web developer, highlighting key projects, skills, and achievements.',
-      image: '/potfolio.jpg', // ✅ Correct path
+      image: '/potfolio.jpg', // ✅ Corrected spelling
       technologies: ['HTML', 'CSS', 'React', 'API Integration'],
       liveUrl: '#',
       githubUrl: '#',
       gradient: 'from-yellow-500 to-orange-500'
     },
   ];
+}
 
   return (
     <section id="projects" className="py-20 bg-black">
