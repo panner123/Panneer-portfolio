@@ -6,33 +6,30 @@ export default function Projects() {
     {
       title: 'Dear Database',
       description: 'A symbol of elegance and agility, the deer embodies grace in motion and serenity in nature.',
-      image: 'public/dear image.jpeg',
-      technologies: ['HTML', 'CSS', 'JavaScript',],
+      image: '/dear-image.jpg', // ✅ Correct path
+      technologies: ['HTML', 'CSS', 'JavaScript'],
       liveUrl: '#',
-      githubUrl: '',
+      githubUrl: '#',
       gradient: 'from-cyan-500 to-blue-500'
     },
     {
       title: 'Food Waste Reduction Platform',
       description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: 'public/food waste.webp',
-      technologies: ['HTML', 'CSS', 'React','AI'],
+      image: '/food-waste.jpg', // ✅ Correct path
+      technologies: ['HTML', 'CSS', 'React', 'AI'],
       liveUrl: '#',
       githubUrl: '#',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Interactive Portfolio Website',
-      description: 'This responsive portfolio website showcases my journey as a web developer, highlighting key projects, skills, and achievements. Designed with clean UI principles and mobile-first responsiveness, it serves as a digital resume and creative showcase.',
-      image: 'public/potfolio.webp',
+      description: 'This responsive portfolio website showcases my journey as a web developer, highlighting key projects, skills, and achievements.',
+      image: '/potfolio.jpg', // ✅ Correct path
       technologies: ['HTML', 'CSS', 'React', 'API Integration'],
       liveUrl: '#',
       githubUrl: '#',
       gradient: 'from-yellow-500 to-orange-500'
     },
-    
-    
-  
   ];
 
   return (
@@ -67,10 +64,10 @@ export default function Projects() {
               <div className="relative overflow-hidden h-48">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={`${project.title} preview`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity`} />
               </div>
 
               <div className="p-6">
