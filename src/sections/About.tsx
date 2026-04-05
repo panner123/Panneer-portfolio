@@ -6,6 +6,8 @@ export default function About() {
     { name: 'HTML & CSS', level: 100, icon: Code2, color: 'from-cyan-500 to-blue-500' },
     { name: 'JavaScript', level: 75, icon: Palette, color: 'from-purple-500 to-pink-500' },
     { name: 'React', level: 85, icon: Zap, color: 'from-yellow-500 to-orange-500' },
+    { name: 'SQL', level: 80, icon: Database, color: 'from-blue-500 to-cyan-500' },
+    { name: 'Python', level: 80, icon: Code2, color: 'from-green-500 to-teal-500' },
     { name: 'Performance Optimization', level: 80, icon: Database, color: 'from-green-500 to-teal-500' },
   ];
 
@@ -92,7 +94,7 @@ export default function About() {
                 viewport={{ once: true }}
                 className="text-4xl font-bold text-cyan-500 mb-2"
               >
-                5+
+                7+
               </motion.div>
               <p className="text-gray-400">Projects Completed</p>
             </div>

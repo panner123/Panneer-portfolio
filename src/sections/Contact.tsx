@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { Mail, MapPin, Phone, Send } from 'lucide-react';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -11,20 +11,49 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
 
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      // Create FormData from state
+      const submissionData = new FormData();
+      // Replace with your Web3Forms Access Key
+      submissionData.append("access_key", "9b8c86b9-4ea4-4121-9805-407987a88a2a");
+      submissionData.append("name", formData.name);
+      submissionData.append("email", formData.email);
+      submissionData.append("message", formData.message);
 
-    setSubmitStatus('success');
-    setIsSubmitting(false);
-    setFormData({ name: '', email: '', message: '' });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: submissionData
+      });
 
-    setTimeout(() => setSubmitStatus('idle'), 3000);
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+        console.log('Message sent successfully');
+      } else {
+        setErrorMessage(data.message || 'Server error');
+        setSubmitStatus('error');
+        console.error('Server error:', data.message);
+      }
+    } catch (error: any) {
+      const message = error?.message || 'Unknown error';
+      console.error('Error sending message:', error);
+      setErrorMessage(message);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    }
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({
       ...prev,
@@ -41,7 +70,7 @@ export default function Contact() {
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/panner123', label: 'GitHub', color: 'hover:text-gray-300' },
     { icon: FaLinkedin, href: 'https://www.linkedin.com/in/panneer-selvam-e-b92656306', label: 'LinkedIn', color: 'hover:text-blue-500' },
-    
+
   ];
 
   return (
@@ -200,6 +229,16 @@ export default function Contact() {
                   className="text-green-500 text-center font-semibold"
                 >
                   Message sent successfully!
+                </motion.div>
+              )}
+
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-red-500 text-center font-semibold"
+                >
+                  {errorMessage || 'Failed to send message. Please try again or contact me directly.'}
                 </motion.div>
               )}
             </form>

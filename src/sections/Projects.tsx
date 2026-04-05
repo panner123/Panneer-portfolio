@@ -4,35 +4,48 @@ import { ExternalLink, Github } from 'lucide-react';
 export default function Projects() {
   const projects = [
     {
-      title: 'Dear Database',
-      description: 'A symbol of elegance and agility, the deer embodies grace in motion and serenity in nature.',
-      image: '/dear-image.jpg',
-      technologies: ['HTML', 'CSS', 'JavaScript'],
+      title: 'Medicare',
+      description: 'A comprehensive web application designed to streamline healthcare services for patients and providers. The project focuses on improving accessibility, efficiency, and transparency in medical record handling.',
+      image: '/medicare-image.webp',
+      technologies: ['HTML', 'CSS', 'JavaScript','React','Python','Django','AI'],
       liveUrl: '#',
       githubUrl: '#',
       gradient: 'from-cyan-500 to-blue-500'
     },
     {
-      title: 'Food Waste Reduction Platform',
-      description: 'Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: '/food-waste.jpg',
-      technologies: ['HTML', 'CSS', 'React', 'AI'],
-      liveUrl: '#',
+      title: 'Retina AI',
+      description: 'Retina AI is a machine learning–powered application designed to analyze retinal images and detect potential eye diseases.',
+      image: '/eyeimage.jpg',
+      technologies: ['HTML', 'CSS','JavaScript', 'React', 'AI'],
       githubUrl: '#',
       gradient: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Interactive Portfolio Website',
       description: 'This responsive portfolio website showcases my journey as a web developer, highlighting key projects, skills, and achievements.',
-      image: '/potfolio.jpg', // ✅ Corrected spelling
+      image: '/potfolio.jpg', 
       technologies: ['HTML', 'CSS', 'React', 'API Integration'],
-      liveUrl: '#',
       githubUrl: '#',
       gradient: 'from-yellow-500 to-orange-500'
     },
+    {
+      title: 'Food Share',
+      description: 'The Food Share Project is a web-based platform designed to connect individuals, communities, and organizations to reduce food waste and promote sharing.',
+      image: '/foodshare.webp',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'AI Integration'],
+      githubUrl: '#',
+      gradient: 'from-green-500 to-teal-500'
+    },
+    {
+      title: 'Travalo',
+      description: 'Travalo is a travel-focused web application designed to make trip planning simple and transparent. It allows users to easily search for tourist destinations and instantly view pricing details, helping them plan journeys based on both interest and budget.',
+      image: '/travel image.webp',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js','AI Integration'],
+      githubUrl: '#',
+      gradient: 'from-blue-500 to-cyan-500'
+    }
   ];
-}
-
+  
   return (
     <section id="projects" className="py-20 bg-black">
       <div className="container mx-auto px-6">
@@ -66,6 +79,11 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={`${project.title} preview`}
+                  onError={(e) => {
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.onerror = null;
+                    img.src = '/fallback.jpg';
+                  }}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className={`absolute inset-0 bg-gradient-to-t ${project.gradient} opacity-0 group-hover:opacity-20 transition-opacity`} />
